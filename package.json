@@ -1,0 +1,9 @@
+{
+  "name": "jyc",
+  "version": "1.0.1",
+  "description": "A sampling of server-side/client-side js utilities for both old-school and modern web",
+  "main": "index.js",
+  "repository": "https://github.com/jyrobin/jyc",
+  "author": "jyrobin <jy.robin.chen@gmail.com>",
+  "license": "MIT"
+}
