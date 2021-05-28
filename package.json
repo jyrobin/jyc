@@ -1,9 +1,14 @@
 {
   "name": "jyc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A sampling of server-side/client-side js utilities for both old-school and modern web",
   "main": "index.js",
   "repository": "https://github.com/jyrobin/jyc",
   "author": "jyrobin <jy.robin.chen@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "debug": "^4.3.1",
+    "loglevel": "^1.7.1",
+    "loglevel-debug": "^0.0.1"
+  }
 }
