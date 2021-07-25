@@ -3,7 +3,7 @@ const dom = require('./dom');
 const { Env, isArray } = require('../lib');
 const { get } = require('../lib/access');
 
-module.exports = {
+const comp = {
   applyBindings(vm, elem, events=['click', 'submit', 'enter']) {
     elem = dom.first(elem);
     if (!vm || !elem || elem._bindingsApplied) return; // hack
@@ -159,3 +159,4 @@ function evalRules(env, ruleSet) {
   }
 }
 
+module.exports = comp;
