@@ -1,14 +1,27 @@
 {
   "name": "jyc",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A sampling of server-side/client-side js utilities for both old-school and modern web",
-  "main": "index.js",
   "repository": "https://github.com/jyrobin/jyc",
   "author": "jyrobin <jy.robin.chen@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
+    "@types/node": "^18.0.6",
     "debug": "^4.3.1",
     "loglevel": "^1.7.1",
-    "loglevel-debug": "^0.0.1"
+    "loglevel-debug": "^0.0.1",
+    "typescript": "^4.7.4"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./lib/*": "./lib/*.js",
+    "./jui/*": "./jui/*.js",
+    "./jog": "./jog/index.js",
+    "./ts": "./dist/ts/index.js",
+    "./ts/fs": "./dist/ts/fs/index.js",
+    "./ts/fs/*": "./dist/ts/fs/*.js"
   }
 }
