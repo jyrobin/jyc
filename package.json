@@ -22,6 +22,7 @@
     "./jog": "./jog/index.js",
     "./node": "./dist/node/index.js",
     "./node/fs": "./dist/node/fs/index.js",
-    "./node/fs/*": "./dist/node/fs/*.js"
+    "./node/fs/*": "./dist/node/fs/*.js",
+    "./node/cli": "./dist/node/cli/index.js"
   }
 }

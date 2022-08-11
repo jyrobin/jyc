@@ -2,24 +2,34 @@ import { existsSync, statSync, Stats } from "fs";
 
 const path = require('path');
 
-export function findStats(name: string): [Stats|undefined, string] {
+export function findStats(name: string, dirs?: string[]): [Stats|undefined, string] {
 	let dir = path.resolve(".");
 	let fpath = path.join(dir, name);
-	while (!existsSync(fpath)) {
-		if (dir.length <= 1) {
-			return [undefined, '']; 
-		}
+	let found = existsSync(fpath);
+	while (dir.length > 1 && !found) {
 		dir = path.resolve(path.join(dir, ".."));
 		fpath = path.join(dir, name);
+		found = existsSync(fpath);
 	}
-	try {
-		return [statSync(fpath), fpath];
-	} catch {
-		return [undefined, fpath];
+
+	if (!found && dirs) {
+		for (let dir of dirs) {
+			fpath = path.join(dir, name);
+			found = existsSync(fpath);
+			if (found) break;
+		}
 	}
+
+	if (found) {
+		try {
+			return [statSync(fpath), fpath];
+		} catch {}
+	}
+
+	return [undefined, fpath];
 }
 
-export function findFile(name: string): string {
+export function findFile(name: string, dirs?: string[]): string {
 	let pair = findStats(name);
 	return pair ? pair[1] : ''
 }
