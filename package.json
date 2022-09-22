@@ -13,11 +13,13 @@
     "debug": "^4.3.1",
     "loglevel": "^1.7.1",
     "loglevel-debug": "^0.0.1",
-    "typescript": "latest"
+    "typescript": "latest",
+    "dotenv": "latest"
   },
   "exports": {
     ".": "./index.js",
     "./lib/*": "./lib/*.js",
+    "./jui": "./jui/index.js",
     "./jui/*": "./jui/*.js",
     "./jog": "./jog/index.js",
     "./node": "./dist/node/index.js",
