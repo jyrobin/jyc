@@ -8,23 +8,16 @@
   "scripts": {
     "build": "tsc"
   },
-  "dependencies": {
-    "@types/node": "latest",
-    "debug": "^4.3.1",
-    "loglevel": "^1.7.1",
-    "loglevel-debug": "^0.0.1",
-    "typescript": "latest",
-    "dotenv": "latest"
+  "devDependencies": {
+    "@types/node": "latest"
   },
   "exports": {
     ".": "./index.js",
     "./lib/*": "./lib/*.js",
     "./jui": "./jui/index.js",
     "./jui/*": "./jui/*.js",
-    "./jog": "./jog/index.js",
-    "./node": "./dist/node/index.js",
-    "./node/fs": "./dist/node/fs/index.js",
-    "./node/fs/*": "./dist/node/fs/*.js",
-    "./node/cli": "./dist/node/cli/index.js"
+    "./node": "./node/index.js",
+    "./node/fs": "./node/fs/index.js",
+    "./node/fs/*": "./node/fs/*.js"
   }
 }

@@ -6,3 +6,4 @@ export declare function findDirectory(name: string): string;
 export declare function fileStats(fpath: string): [Stats | undefined, string];
 export declare function isFile(fpath: string): boolean;
 export declare function isDirectory(fpath: string): boolean;
+//# sourceMappingURL=index.d.ts.map
